@@ -16,11 +16,23 @@ int getSum(vector<int> numbers)
 	    return vectorSum;
 }
 
+
 int getMin(vector<int> numbers)
 {
 	    int minElement = *min_element(numbers.begin(), numbers.end());
 
 	    return minElement;
+}
+
+float getAverage(vector<int> numbers)
+{
+	    int vectorSize = numbers.size();
+	    int vectorSum = getSum(numbers);
+            float vectorAvg = (float) vectorSum / vectorSize;
+
+            return vectorAvg;
+
+
 }
 
 int main()
@@ -29,6 +41,7 @@ int main()
 
 	    cout<< getSum(testVector)<<endl;
 	    cout<<getMin(testVector)<<endl;	   
+            cout<< getAverage(testVector)<<endl;		   
 	    
 	    return 0;
 }
